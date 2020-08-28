@@ -1,0 +1,18 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-tab-group backgroundColor="primary" color="accent">
+      <mat-tab label="Начало"></mat-tab>
+      <mat-tab label="Събития"></mat-tab>
+      <mat-tab label="Турнири"></mat-tab>
+    </mat-tab-group>
+
+    <span class="example-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">ChrisRb</button>
+    <mat-menu color="primary" #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Профил</button>
+      <button mat-menu-item>Изход</button>
+    </mat-menu>
+
+  </mat-toolbar>
+</div>
