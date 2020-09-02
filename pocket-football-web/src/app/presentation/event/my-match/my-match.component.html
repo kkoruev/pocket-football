@@ -1,0 +1,19 @@
+<mat-list>
+  <mat-list-item *ngFor="let match of dataSource">
+    <img matListAvatar [src]="match.image" alt="...">
+
+
+    <h3 matLine> {{match.title}} </h3>
+
+    <p matLine>
+      <mat-icon class="host-icon" color="primary">accessibility</mat-icon>
+      <span> {{match.host}} </span>
+    </p>
+    <div>
+      {{match.currentParticipants}} / {{match.allowedParticipants}}
+    </div>
+    <mat-icon>done</mat-icon>
+    <mat-icon>clear</mat-icon>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

@@ -9,6 +9,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
+import {MatListModule} from '@angular/material/list';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -19,7 +20,8 @@ const MaterialComponents = [
   MatToolbarModule,
   MatMenuModule,
   MatGridListModule,
-  MatTableModule
+  MatTableModule,
+  MatListModule
 ];
 
 @NgModule({

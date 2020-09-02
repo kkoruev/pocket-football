@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {EventComponent} from '../presentation/event/event/event.component';
+import {MyMatchComponent} from '../presentation/event/my-match/my-match.component';
 
 const routes: Routes = [
-  {path: 'home', component: EventComponent},
+  {path: 'home', component: MyMatchComponent},
 ];
 
 @NgModule({

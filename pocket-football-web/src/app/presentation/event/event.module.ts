@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EventComponent } from './event/event.component';
+import { MyMatchComponent } from './my-match/my-match.component';
+import {MaterialModule} from '../material/material.module';
 
 
 
 @NgModule({
-  declarations: [EventComponent],
+  declarations: [MyMatchComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    MaterialModule
+  ],
+  exports: [MyMatchComponent]
 })
 export class EventModule { }
