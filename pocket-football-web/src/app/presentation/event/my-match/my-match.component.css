@@ -2,3 +2,22 @@
   font-size: 17px;
   width: 15px;
 }
+
+.flex-mat-list-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 12%;
+}
+
+.grid {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mat-list-item-style {
+  max-width: 90%;
+}
+
+
