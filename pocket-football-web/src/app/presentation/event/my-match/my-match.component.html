@@ -17,9 +17,26 @@
   </mat-list>
 
   <div>
-    <h3 style="display: flex; justify-content: center">
-      Profile
-    </h3>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          {{currentUser.userName}}
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{currentUser.sportType.valueOf() + ' Player'}}
+        </mat-card-subtitle>
+        <img mat-card-avatar src="{{currentUser.image}}">
+      </mat-card-header>
+      <mat-card-content>
+        <mat-chip-list>
+          <mat-chip *ngFor="let playerPositions of currentUser.playerPositions">
+            {{playerPositions.valueOf()}}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary"> Всички мачове </button>
+      </mat-card-actions>
+    </mat-card>
   </div>
-
 </div>
