@@ -18,7 +18,7 @@
 
   <div>
     <mat-card>
-      <mat-card-header>
+      <mat-card-header class="center">
         <mat-card-title>
           {{currentUser.userName}}
         </mat-card-title>
@@ -27,15 +27,40 @@
         </mat-card-subtitle>
         <img mat-card-avatar src="{{currentUser.image}}">
       </mat-card-header>
-      <mat-card-content>
-        <mat-chip-list>
-          <mat-chip *ngFor="let playerPositions of currentUser.playerPositions">
-            {{playerPositions.valueOf()}}
-          </mat-chip>
-        </mat-chip-list>
+      <mat-card-content class="center">
+        <div class="columns">
+          <div class="statistic-row">
+            <div>
+              <p>played matches</p>
+              <p class="center">4</p>
+            </div>
+            <div>
+              <p>friends</p>
+              <p class="center">12</p>
+            </div>
+            <div>
+              <p>goals</p>
+              <p class="center">12</p>
+            </div>
+          </div>
+
+          <div class="center">
+            <mat-chip-list>
+              <mat-chip *ngFor="let playerPositions of currentUser.playerPositions">
+                {{playerPositions.valueOf()}}
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary"> Всички мачове </button>
+      <mat-card-actions class="center">
+<!--        <button mat-raised-button color="primary"> Всички мачове </button>-->
+        <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
+          <mat-icon>sports_soccer</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
+          <mat-icon>person_add_alt_1</mat-icon>
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>

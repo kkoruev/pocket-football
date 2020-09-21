@@ -13,11 +13,30 @@
   padding-left: 50px;
   padding-right: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
 }
 
 .mat-list-item-style {
   max-width: 90%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistic-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
 }
 
 
