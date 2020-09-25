@@ -3,15 +3,33 @@
     <mat-list-item class="mat-list-item-style" *ngFor="let match of dataSource">
       <img matListAvatar [src]="match.image" alt="...">
       <h3 matLine> {{match.title}} </h3>
-      <p matLine>
-        <mat-icon class="host-icon" color="primary">accessibility</mat-icon>
-        <span> {{match.host}} </span>
-      </p>
-      <div>
-        {{match.currentParticipants}} / {{match.allowedParticipants}}
+      <div matLine>
+        <mat-icon class="host-icon" color="primary">home</mat-icon>
+        <span style="vertical-align: super"> {{match.host}}</span>
+
+        <mat-icon style="padding-left: 20%" class="host-icon" color="primary">location_on</mat-icon>
+        <span style="vertical-align: super"> {{match.place}}</span>
       </div>
-      <mat-icon>done</mat-icon>
-      <mat-icon>clear</mat-icon>
+      <div matLine>
+        <mat-icon class="host-icon" color="primary">email</mat-icon>
+        <span style="vertical-align: super"> {{match.host}}</span>
+      </div>
+
+      {{match.currentParticipants}} / {{match.allowedParticipants}}
+
+      <div>
+        <div *ngIf="match.isMatchFull()">
+          <mat-icon>access_time</mat-icon>
+        </div>
+
+        <div style="display: flex; flex-direction: row" *ngIf="!match.isMatchFull()">
+          <mat-icon>done</mat-icon>
+          <mat-icon>clear</mat-icon>
+          <mat-icon>flaky</mat-icon>
+        </div>
+      </div>
+
+
       <mat-divider></mat-divider>
     </mat-list-item>
   </mat-list>

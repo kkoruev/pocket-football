@@ -1,6 +1,7 @@
 .host-icon {
-  font-size: 17px;
-  width: 15px;
+  /*font-size: 17px;*/
+  /*!*width: 15px;*!*/
+  /*line-height: 100%;*/
 }
 
 .flex-mat-list-container {
