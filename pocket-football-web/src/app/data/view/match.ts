@@ -1,3 +1,5 @@
+import {HostActionEnum} from "./host-action.enum";
+
 export class Match {
   id: string;
   title: string;
@@ -7,9 +9,13 @@ export class Match {
   allowedParticipants: number;
   image: string;
 
+  // user related
+  invitedBy: string;
+  hostAction: HostActionEnum;
+
 
   constructor(id: string, title: string, host: string, place: string, currentParticipants: number,
-              allowedParticipants: number, image: string) {
+              allowedParticipants: number, image: string, invitedBy: string, hostAction: HostActionEnum) {
     this.id = id;
     this.title = title;
     this.host = host;
@@ -17,6 +23,8 @@ export class Match {
     this.currentParticipants = currentParticipants;
     this.allowedParticipants = allowedParticipants;
     this.image = image;
+    this.invitedBy = invitedBy;
+    this.hostAction = hostAction;
   }
 
   isMatchFull(): boolean {

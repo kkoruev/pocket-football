@@ -40,4 +40,8 @@
   min-width: 50%;
 }
 
+.pointable {
+  cursor: pointer;
+}
+
 

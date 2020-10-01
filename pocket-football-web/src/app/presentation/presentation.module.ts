@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {HeaderModule} from './header/header.module';
 import {MaterialModule} from './material/material.module';
 import {EventModule} from './event/event.module';
+import {UserModule} from './user/user.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {EventModule} from './event/event.module';
   ],
   exports: [
     HeaderModule,
-    EventModule
+    EventModule,
+    UserModule
   ]
 })
 export class PresentationModule { }

@@ -1,3 +1,4 @@
+<!-- Match invitations -->
 <div class="grid">
   <mat-list >
     <mat-list-item class="mat-list-item-style" *ngFor="let match of dataSource">
@@ -19,13 +20,17 @@
 
       <div>
         <div *ngIf="match.isMatchFull()">
-          <mat-icon>access_time</mat-icon>
+          <mat-icon>hourglass_top</mat-icon>
         </div>
 
+<!--        <div style="display: flex; flex-direction: row" *ngIf="!match.isMatchFull()">-->
+<!--          <mat-icon >access_time</mat-icon>-->
+<!--        </div>-->
+
         <div style="display: flex; flex-direction: row" *ngIf="!match.isMatchFull()">
-          <mat-icon>done</mat-icon>
-          <mat-icon>clear</mat-icon>
-          <mat-icon>flaky</mat-icon>
+          <mat-icon class="pointable" (click)="accept(match)" *ngIf="isMatchAccepted(match)">done</mat-icon>
+          <mat-icon class="pointable" (click)="reject(match)" *ngIf="isMatchRejected(match)">clear</mat-icon>
+          <mat-icon class="pointable" (click)="maybe(match)" *ngIf="isMatchMaybe(match)">help_outline</mat-icon>
         </div>
       </div>
 
@@ -34,6 +39,7 @@
     </mat-list-item>
   </mat-list>
 
+<!--  Profile info-->
   <div>
     <mat-card>
       <mat-card-header class="center">
