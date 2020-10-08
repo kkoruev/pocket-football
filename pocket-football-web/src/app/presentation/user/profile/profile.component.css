@@ -39,9 +39,28 @@
 }
 
 .profile-data-buttons {
-  background-color: white;
-  box-shadow: -4px 2px 18px 0px rgba(0,0,0,0.75);
-  border-radius: 25px;
-
   grid-column: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+mat-icon + span {
+  margin-left: 10px;
+}
+
+.info-buttons {
+  max-width: 250px;
+  min-width: 220px;
+  margin-bottom: 10px;
+}
+
+.edit-buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -3,22 +3,84 @@
   <div class="profile-data-container">
 
     <div class="profile-personal-data">
-      <h2> Chris </h2>
+      <div style="margin: 15px">
+        <mat-card>
+          <mat-card-header class="center">
+            <mat-card-title>
+              {{user.userName}}
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{user.sportType.valueOf() + ' player'}}
+            </mat-card-subtitle>
+            <img mat-card-avatar src="{{user.image}}">
+          </mat-card-header>
+        </mat-card>
+        <mat-list>
+          <mat-list-item>
+            <div matLine>
+              <mat-icon color="primary">face</mat-icon>
+              <span class="text-icon-center">{{user.age}} years old</span>
+            </div>
+          </mat-list-item>
+
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <div matLine>
+              <mat-icon color="primary">sports_soccer</mat-icon>
+              <span class="text-icon-center">defender</span>
+            </div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <div matLine>
+              <mat-icon color="primary">verified</mat-icon>
+              <span class="text-icon-center">casual player</span>
+            </div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <div matLine>
+              <mat-icon color="primary">report_problem</mat-icon>
+              <span class="text-icon-center">Response rate: 30%</span>
+            </div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
     </div>
 
     <div class="profile-sport-data-fields">
-      <p>25 old</p>
-      <p>defender</p>
-      <p>casual player</p>
-      <p>response rate</p>
+      <mat-list style="margin-top: 5%; margin-bottom: 5%">
+        <mat-list-item>
+          <div matLine>
+            <mat-icon color="primary">alternate_email</mat-icon>
+            <span *ngIf="!user.email.isHidden" class="text-icon-center">{{user.email.dataField}}</span>
+            <span *ngIf="user.email.isHidden" class="text-icon-center">********</span>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <div matLine>
+            <mat-icon color="primary">call</mat-icon>
+            <span *ngIf="!user.phoneNumber.isHidden" class="text-icon-center">{{user.phoneNumber.dataField}}</span>
+            <span *ngIf="user.phoneNumber.isHidden" class="text-icon-center">********</span>
+          </div>
+        </mat-list-item>
+      </mat-list>
     </div>
 
     <div class="profile-data-buttons">
-      <button mat-button>My Matches</button>
-      <button mat-button>My Friends</button>
-      <button mat-button>My Fields</button>
-      <button mat-button>Edit my profile</button>
+      <button mat-raised-button color="primary" class="info-buttons">My Matches</button>
+      <button mat-raised-button class="info-buttons">My Friends</button>
+      <button mat-raised-button  class="info-buttons">My Fields</button>
     </div>
+
+<!--    <button mat-raised-button color="primary" class="edit-buttons">Edit my profile</button>-->
+</div>
+
+  <div class="edit-buttons">
+    <button mat-raised-button color="primary" style="min-width: 400px">Edit my profile</button>
   </div>
 
 </div>

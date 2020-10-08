@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Match} from '../../../data/view/match';
-import {User} from "../../../data/view/user";
-import {SportEnum} from "../../../data/view/sport.enum";
-import {PlayerPositionEnum} from "../../../data/view/player-position.enum";
-import {HostActionEnum} from "../../../data/view/host-action.enum";
+import {User} from '../../../data/view/user';
+import {SportEnum} from '../../../data/view/sport.enum';
+import {PlayerPositionEnum} from '../../../data/view/player-position.enum';
+import {HostActionEnum} from '../../../data/view/host-action.enum';
 
 
 const MATCH_DATA: Match[] = [

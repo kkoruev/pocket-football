@@ -1,4 +1,4 @@
-import {HostActionEnum} from "./host-action.enum";
+import {HostActionEnum} from './host-action.enum';
 
 export class Match {
   id: string;

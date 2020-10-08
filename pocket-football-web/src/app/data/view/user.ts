@@ -1,5 +1,6 @@
 import {SportEnum} from './sport.enum';
 import {PlayerPositionEnum} from './player-position.enum';
+import {HidableData} from './hidable-data';
 
 export interface User {
   id: string;
@@ -10,4 +11,6 @@ export interface User {
   friends: number;
   image: string;
   playerPositions: PlayerPositionEnum[];
+  email: HidableData;
+  phoneNumber: HidableData;
 }
