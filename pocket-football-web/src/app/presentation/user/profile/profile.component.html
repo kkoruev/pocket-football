@@ -27,21 +27,24 @@
           <mat-list-item>
             <div matLine>
               <mat-icon color="primary">sports_soccer</mat-icon>
-              <span class="text-icon-center">defender</span>
+              <span *ngFor="let playerPosition of user.playerPositions"
+                    class="text-icon-center">
+                {{playerPosition.valueOf()}}
+              </span>
             </div>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
             <div matLine>
               <mat-icon color="primary">verified</mat-icon>
-              <span class="text-icon-center">casual player</span>
+              <span class="text-icon-center">{{user.playerLevel.valueOf()}}</span>
             </div>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
             <div matLine>
               <mat-icon color="primary">report_problem</mat-icon>
-              <span class="text-icon-center">Response rate: 30%</span>
+              <span class="text-icon-center">Discipline level: </span>
             </div>
           </mat-list-item>
           <mat-divider></mat-divider>
@@ -71,9 +74,29 @@
     </div>
 
     <div class="profile-data-buttons">
-      <button mat-raised-button color="primary" class="info-buttons">My Matches</button>
-      <button mat-raised-button class="info-buttons">My Friends</button>
-      <button mat-raised-button  class="info-buttons">My Fields</button>
+<!--      <button mat-raised-button color="primary" class="info-buttons">My Matches</button>-->
+<!--      <button mat-raised-button class="info-buttons">My Friends</button>-->
+<!--      <button mat-raised-button  class="info-buttons">My Fields</button>-->
+      <mat-list-item>
+        <div matLine>
+          <mat-icon color="primary">sports</mat-icon>
+          <span class="text-icon-center">Played matches: {{user.stats.playedMatches}}</span>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div matLine>
+          <mat-icon color="primary">event</mat-icon>
+          <span class="text-icon-center">Organized matches: {{user.stats.organizedMatches}}</span>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div matLine>
+          <mat-icon color="primary">star</mat-icon>
+          <span class="text-icon-center">MOTM: {{user.stats.starPlayer}}</span>
+        </div>
+      </mat-list-item>
     </div>
 
 <!--    <button mat-raised-button color="primary" class="edit-buttons">Edit my profile</button>-->

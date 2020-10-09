@@ -5,11 +5,11 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: 4%;
+  margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1000px;
-  border: 1px solid  rgba(55,75,132,0.2);
+  /*border: 1px solid  rgba(55,75,132,0.2);*/
   padding: 3rem;
   border-radius: 25px;
   background-color: rgba(86,87,94,0.14);
@@ -41,6 +41,10 @@
 .profile-data-buttons {
   grid-column: 2;
 
+  background-color: white;
+  box-shadow: -4px 2px 18px 0px rgba(0,0,0,0.75);
+  border-radius: 25px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,8 +63,10 @@ mat-icon + span {
 
 .edit-buttons {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
