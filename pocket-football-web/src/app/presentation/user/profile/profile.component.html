@@ -43,8 +43,8 @@
           <mat-divider></mat-divider>
           <mat-list-item>
             <div matLine>
-              <mat-icon color="primary">report_problem</mat-icon>
-              <span class="text-icon-center">Discipline level: </span>
+              <mat-icon color="primary">more_time</mat-icon>
+              <span class="text-icon-center">Response time: TBD</span>
             </div>
           </mat-list-item>
           <mat-divider></mat-divider>
@@ -73,30 +73,43 @@
       </mat-list>
     </div>
 
-    <div class="profile-data-buttons">
-<!--      <button mat-raised-button color="primary" class="info-buttons">My Matches</button>-->
-<!--      <button mat-raised-button class="info-buttons">My Friends</button>-->
-<!--      <button mat-raised-button  class="info-buttons">My Fields</button>-->
-      <mat-list-item>
-        <div matLine>
-          <mat-icon color="primary">sports</mat-icon>
-          <span class="text-icon-center">Played matches: {{user.stats.playedMatches}}</span>
-        </div>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>
-        <div matLine>
-          <mat-icon color="primary">event</mat-icon>
-          <span class="text-icon-center">Organized matches: {{user.stats.organizedMatches}}</span>
-        </div>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>
-        <div matLine>
-          <mat-icon color="primary">star</mat-icon>
-          <span class="text-icon-center">MOTM: {{user.stats.starPlayer}}</span>
-        </div>
-      </mat-list-item>
+    <div class="profile-data-buttons-stats">
+
+      <div class="profile-data-stats">
+        <mat-list-item>
+          <div matLine>
+            <mat-icon color="primary">sports</mat-icon>
+            <span class="text-icon-center">Played matches: {{user.stats.playedMatches}}</span>
+          </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div matLine>
+            <mat-icon color="primary">event</mat-icon>
+            <span class="text-icon-center">Organized matches: {{user.stats.organizedMatches}}</span>
+          </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div matLine>
+            <mat-icon color="primary">star</mat-icon>
+            <span class="text-icon-center">MOTM: {{user.stats.starPlayer}}</span>
+          </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div matLine>
+            <mat-icon color="primary">report_problem</mat-icon>
+            <span class="text-icon-center">Discipline level: TBD</span>
+          </div>
+        </mat-list-item>
+      </div>
+
+      <div class="profile-data-stats">
+        <button mat-raised-button color="primary" class="info-buttons">My Matches</button>
+        <button mat-raised-button class="info-buttons">My Friends</button>
+        <button mat-raised-button  class="info-buttons">My Fields</button>
+      </div>
     </div>
 
 <!--    <button mat-raised-button color="primary" class="edit-buttons">Edit my profile</button>-->

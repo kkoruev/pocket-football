@@ -38,13 +38,18 @@
   grid-column: 2;
 }
 
-.profile-data-buttons {
+.profile-data-buttons-stats {
   grid-column: 2;
 
   background-color: white;
   box-shadow: -4px 2px 18px 0px rgba(0,0,0,0.75);
   border-radius: 25px;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-data-stats {
   display: flex;
   align-items: center;
   justify-content: center;
