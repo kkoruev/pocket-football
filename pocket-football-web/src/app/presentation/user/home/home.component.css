@@ -5,21 +5,57 @@
   height: 80%;
 }
 
+.home-container {
+  display: grid;
+  grid-template-rows: [logo-row] 3.5fr [sign-in-row] 2fr [sign-in-integration-row] 2fr [register-row] 1fr;
+
+  margin-top: 2%;
+  height: 80vh;
+}
+
+.logo-picture {
+  grid-row: logo-row / sign-in-row;
+
+  background-image: url("https://ronaldo.com/wp-content/uploads/2018/03/Natural-grass-vs.-artificial-grass.jpg");
+  background-repeat: no-repeat;
+
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.sign-in {
+  margin-top: 15px;
+  grid-row: sign-in-row / sign-in-integration-row;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.sign-in mat-label {
+  margin-right: 7px;
+}
+
+.sign-in mat-form-field {
+  margin-right: 5px;
+}
+
+.sign-in button {
+  width: 120px;
+}
+.log-in {
+  grid-row: sign-in-integration-row / register-row;
+}
+
+.register {
+  grid-row: register-row / final-row;
+}
+
+
+
 .line {
   flex: 1;
 }
 
-.text {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.home-container {
-  height: 100%;
-  background-color: rgba(86,87,94,0.14);
-}
-
-.mat-raised-button {
-  min-width: 200px;
-  margin-left: 20px;
-}
