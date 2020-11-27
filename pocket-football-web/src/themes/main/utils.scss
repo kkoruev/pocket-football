@@ -1,0 +1,9 @@
+@import "main-theme.scss";
+
+.background-color-primary {
+  background-color: mat-color($custom-theme-primary);
+}
+
+.color-accent {
+  color: mat-color($custom-theme-accent);
+}

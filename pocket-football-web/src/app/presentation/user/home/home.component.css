@@ -7,7 +7,7 @@
 
 .home-container {
   display: grid;
-  grid-template-rows: [logo-row] 3.5fr [sign-in-row] 2fr [sign-in-integration-row] 2fr [register-row] 1fr;
+  grid-template-rows: [logo-row] 3.5fr [sign-in-row] 2fr [sign-in-integration-row] 1.5fr [register-row] 2fr;
 
   margin-top: 2%;
   height: 80vh;
@@ -83,6 +83,35 @@
 
 .register {
   grid-row: register-row / final-row;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.register-title {
+  margin-top: 1%;
+  margin-left: 1%;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.register-content {
+  margin-left: 1%;
+  display: flex;
+  font-size: large;
+  flex-direction: row;
+  color: white;
+}
+
+.register-text {
+  flex: 2;
+}
+
+.register-button {
+  flex: 1;
+  max-width: 28%;
+  margin-right: 1%;
 }
 
 
