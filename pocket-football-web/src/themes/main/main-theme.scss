@@ -6,7 +6,7 @@
 @import '../../colors/var-green';
 
 $custom-theme-primary: mat-palette($var-blue);
-$custom-theme-accent: mat-palette($var-green, A400, A300, A600);
+$custom-theme-accent: mat-palette($var-green, 500, 100, 900);
 $custom-theme-warn: mat-palette($mat-red);
 
 $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
